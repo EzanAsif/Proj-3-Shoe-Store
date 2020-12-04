@@ -18,7 +18,6 @@ export const FeaturedCol = () => {
       <div className="featuredCol-cards">
         {storeKeys.map((keyName) => {
           const shoe = store[keyName];
-          console.log(shoe);
           return (
             <div key = {keyName} className="featured-card">
               <div className="featured-card-image">
