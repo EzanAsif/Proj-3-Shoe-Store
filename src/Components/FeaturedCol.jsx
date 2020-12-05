@@ -7,6 +7,7 @@ import featuered4 from "../Images/featuered-4.jpg";
 import featuered5 from "../Images/featuered-5.jpg";
 import featuered6 from "../Images/featuered-6.jpg";
 import { StoreData } from "../Store-data";
+import { Link } from "react-router-dom";
 
 export const FeaturedCol = () => {
   let store = StoreData;
@@ -19,11 +20,11 @@ export const FeaturedCol = () => {
         {storeKeys.map((keyName) => {
           const shoe = store[keyName];
           return (
-            <div key = {keyName} className="featured-card">
+            <div key={keyName} className="featured-card">
               <div className="featured-card-image">
-                <a href="">
+                <Link key={keyName} class="link" to={`/product/${keyName}`}>
                   <img src={shoe.img} alt="" />
-                </a>
+                </Link>
               </div>
               <div className="featured-card-title">
                 <h4>{shoe.name}</h4>
@@ -33,7 +34,7 @@ export const FeaturedCol = () => {
               </div>
               <div className="featured-card-router-button">
                 <div className="view">
-                  <a href="">VIEW</a>
+                <Link key={keyName} class="link" to={`/product/${keyName}`}>View</Link>
                 </div>
                 <div className="add-to-cart">
                   <a href="">
