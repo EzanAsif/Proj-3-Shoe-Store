@@ -359,6 +359,7 @@ Footer {
   display: flex;
   flex-wrap: wrap;
   height: max-content;
+  margin-bottom: 0;
 }
 
 .Ind-Item .ind-item-img {
