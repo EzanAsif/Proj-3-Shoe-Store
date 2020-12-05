@@ -178,7 +178,7 @@ nav {
 =================  FeaturedCol   ============
 ========================================== */
 
-.FeaturedCol{
+.FeaturedCol {
   width: 100%;
   height: max-content;
   display: flex;
@@ -188,7 +188,8 @@ nav {
   flex-wrap: wrap;
 }
 
-.FeaturedCol h2, .Gallery h2 {
+.FeaturedCol h2,
+.Gallery h2 {
   width: 50%;
   text-align: center;
   font-weight: 700;
@@ -219,7 +220,7 @@ nav {
   transition: 0.2s ease;
 }
 
-.featured-card:hover{
+.featured-card:hover {
   border: 1px solid rgba(143, 143, 143, 0.801);
   box-shadow: 2px 2px 5px rgba(190, 190, 190, 0.801);
 }
@@ -279,7 +280,7 @@ nav {
 ===============    photo_gallery    ======
 ========================================= */
 
-.Gallery{
+.Gallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,7 +290,7 @@ nav {
   padding-top: 20px;
 }
 
-.Gallery .photo_gallery{
+.Gallery .photo_gallery {
   width: 90%;
   height: max-content;
   display: flex;
@@ -314,7 +315,7 @@ nav {
 ===========   FOOTER   ================
 ===================================== */
 
-Footer{
+Footer {
   margin-top: 50px;
   width: 100%;
   height: max-content;
@@ -322,7 +323,7 @@ Footer{
   background-color: rgba(0, 0, 0, 0.904);
 }
 
-.footer{
+.footer {
   width: 70%;
   margin: 10px auto;
   display: flex;
@@ -332,15 +333,15 @@ Footer{
   text-align: center;
 }
 
-.footer h4{
+.footer h4 {
   font-size: 24px;
   text-transform: uppercase;
   color: white;
 }
-.footer a{
+.footer a {
   width: max-content;
 }
-.footer .Github{
+.footer .Github {
   text-align: center;
   font-size: 50px !important;
   color: crimson;
@@ -351,9 +352,100 @@ Footer{
 ============ Ind-Item =============
 ==================================*/
 
-.Ind-Item{
-  margin: 10vh auto;
+.Ind-Item {
+  margin: 20vh auto;
   height: 40.25vh;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+}
+
+.Ind-Item .ind-item-img {
+  width: 100%;
+  height: 300px;
+}
+
+.Ind-Item .ind-item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.Ind-Item .ind-item-desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ind-item-desc .ind-item-desc-heading h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.ind-item-desc .ind-item-desc-para p {
+  font-size: 15px;
+  margin: 5px 0px;
+  color: #454545;
+}
+
+.ind-item-buy-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.ind-item-buy-buttons button {
+  margin: 10px 0px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.ind-item-buy-buttons .add-to-cart {
+  margin: 10px 0px;
+  width: 90%;
+  background: white;
+  padding: 8px 0px;
+  box-shadow: none !important;
+  border: 2px solid black;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+}
+
+.ind-item-buy-buttons .add-to-cart:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.ind-item-buy-buttons .buy-it-now {
+  margin: 10px 0px;
+  width: 90%;
+  background: black;
+  padding: 8px 0px;
+  box-shadow: none !important;
+  color: white;
+  border: 2px solid black;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+}
+.ind-item-buy-buttons .buy-it-now:hover {
+  background: rgb(22, 20, 20);
+  border: 2px solid rgb(22, 20, 20);
+}
+
+.ind-item-desc-price {
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+  margin: 5px 0px;
+  color: #3e3a3a !important;
 }
 
 /*==================================
@@ -378,6 +470,12 @@ Footer{
     font-weight: 500;
     /* text-transform: uppercase; */
   }
+  .Ind-Item {
+    width: 80%;
+  }
+  .Ind-Item .ind-item-img {
+    height: 500px;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
@@ -393,7 +491,7 @@ Footer{
     height: max-content;
   }
 
-  .featuredCol-cards{
+  .featuredCol-cards {
     margin: 2% auto;
   }
   .Gallery .photo_gallery .ind-pic {
@@ -401,9 +499,20 @@ Footer{
     height: 500px;
     margin: 5px 1px;
   }
-  .footer h4{
+  .footer h4 {
     font-size: 25px;
   }
+  .Ind-Item{
+    justify-content: space-around;
+  }
+  .Ind-Item .ind-item-img {
+    width: 47%;
+    height: 330px;
+  }
+  .Ind-Item .ind-item-desc {
+    width: 47%;
+  }
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -413,7 +522,7 @@ Footer{
   }
   nav {
     padding: 10px 10px !important;
-    height: 100px !important;
+    height: 80px !important;
   }
   .FeaturedCol h2 {
     font-size: 38px;
@@ -425,7 +534,7 @@ Footer{
     height: max-content;
   }
 
-  .featuredCol-cards{
+  .featuredCol-cards {
     margin: 2% auto;
   }
 
@@ -435,8 +544,27 @@ Footer{
     margin: 5px 1px;
   }
 
-  .footer h4{
+  .footer h4 {
     font-size: 25px;
+  }
+
+  .Ind-Item{
+    justify-content: space-around;
+  }
+  .Ind-Item .ind-item-img {
+    width: 47%;
+    height: 330px;
+  }
+  .Ind-Item .ind-item-desc {
+    width: 47%;
+  }
+  .Ind-Item .ind-item-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Ind-Item .ind-item-img img{
+    width: 50%;
   }
 
 }
@@ -453,7 +581,7 @@ Footer{
     padding: 0 2px;
   }
   nav {
-    padding: 40px 20px !important;
+    padding: 30px 20px !important;
   }
   .navbar-brand {
     margin-left: 100px !important;
@@ -472,7 +600,7 @@ Footer{
     font-size: 15px;
   }
 
-  .featuredCol-cards{
+  .featuredCol-cards {
     margin: 2% auto;
   }
 
@@ -490,44 +618,58 @@ Footer{
     margin-right: 5px !important;
   }
 
-
   .Gallery .photo_gallery .ind-pic {
     width: 33%;
     height: 500px;
     margin: 5px 1px;
   }
 
-  .Gallery .photo_gallery #img-1{
+  .Gallery .photo_gallery #img-1 {
     width: 25%;
     height: 600px;
   }
 
-  .Gallery .photo_gallery #img-2{
+  .Gallery .photo_gallery #img-2 {
     width: 40%;
     height: 600px;
   }
 
-  .Gallery .photo_gallery #img-3{
+  .Gallery .photo_gallery #img-3 {
     width: 30%;
     height: 600px;
   }
 
-  .Gallery .photo_gallery #img-4{
+  .Gallery .photo_gallery #img-4 {
     width: 25%;
     height: 600px;
   }
 
-  .Gallery .photo_gallery #img-5{
+  .Gallery .photo_gallery #img-5 {
     width: 40%;
     height: 600px;
   }
-  .Gallery .photo_gallery #img-6{
+  .Gallery .photo_gallery #img-6 {
     width: 30%;
     height: 600px;
   }
 
-  .footer h4{
+  .footer h4 {
     font-size: 25px;
   }
-  
+  .Ind-Item{
+    justify-content: space-around;
+  }
+  .Ind-Item .ind-item-img {
+    width: 47%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Ind-Item .ind-item-desc {
+    width: 47%;
+  }
+  .Ind-Item .ind-item-img img{
+    width: 40%;
+  }
 }
